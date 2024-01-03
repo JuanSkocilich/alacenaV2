@@ -11,7 +11,7 @@ import { ModalDeleteProduct } from "./ModalDeleteProduct";
 import { AiOutlinePlus, AiOutlineMinus } from "react-icons/ai";
 import { CiEdit } from "react-icons/ci";
 
-export default function ({ product }) {
+export const ProductCard = ({ product }) => {
   const { editProduct } = useProduct();
 
   const [isOpenEdit, setIsOpenEdit] = useState(false);
@@ -89,4 +89,4 @@ export default function ({ product }) {
       </div>
     </div>
   );
-}
+};

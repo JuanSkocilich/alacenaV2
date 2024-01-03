@@ -3,9 +3,9 @@
 import React, { Suspense, lazy, useEffect, useState } from "react";
 import { GrNext, GrPrevious } from "react-icons/gr";
 import ReactPaginate from "react-paginate";
-import ProductCard from "./product-card/ProductCard";
 import "./ProductsPagination.css";
 import { useSearchParams } from "next/navigation";
+import { ProductCard } from "./product-card/ProductCard";
 
 function Items({ currentItems }) {
   return (
