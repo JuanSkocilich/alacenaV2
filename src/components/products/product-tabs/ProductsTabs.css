@@ -1,0 +1,23 @@
+.tab-title {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  align-items: center;
+  gap: 7px;
+}
+
+.tab-icon {
+  display: flex;
+}
+
+@media (width < 481px) {
+  .tab-title {
+    justify-content: space-between;
+  }
+}
+
+.container-type-product {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
