@@ -3,8 +3,7 @@
 #### Instalar dependencias
 
 ```
-npm i yup sonner resend react-hook-form @hookform/resolvers
- next-auth jsonwebtoken bcrypt prisma
+npm i yup sonner resend react-hook-form @hookform/resolvers prisma
 ```
 
 #### Iniciar prisma

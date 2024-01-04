@@ -23,7 +23,8 @@ export function CategoryProvider({ children }) {
   const [changeCategory, setChangeCategory] = useState(false);
 
   const getAllCategories = async () => {
-    const res = await fetch("/api/category");
+    try {
+      const res = await fetch("/api/category");
     const resJSON = await res.json();
 
     const selecCategoryArray = [{ value: "", label: "Sin categoria" }];
@@ -45,6 +46,9 @@ export function CategoryProvider({ children }) {
     setSelectCategories(orderByName);
 
     setAllCategories(resJSON);
+    } catch (error) {
+      console.log(error)
+    }
   };
 
   const createCategory = async (category) => {
