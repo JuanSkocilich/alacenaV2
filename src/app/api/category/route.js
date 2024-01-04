@@ -2,9 +2,13 @@ import { NextResponse } from "next/server";
 import { db } from "@/libs/db";
 
 export async function GET() {
-  const categories = await db.category.findMany({ orderBy: { name: "asc" } });
+  try {
+    const categories = await db.category.findMany({ orderBy: { name: "asc" } });
 
-  return NextResponse.json(categories);
+    return NextResponse.json(categories);
+  } catch (error) {
+    return NextResponse.json({ message: error.message }, { status: 400 });
+  }
 }
 
 export async function POST(request) {
