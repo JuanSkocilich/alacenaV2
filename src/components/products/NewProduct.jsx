@@ -11,7 +11,7 @@ export const NewProduct = () => {
 
   return (
     <div>
-      <button onClick={() => setIsOpen(true)}>
+      <button className="button-new-category" onClick={() => setIsOpen(true)}>
         <MdOutlineAdd /> Agregar Producto
       </button>
       <Modal setIsOpen={setIsOpen} open={isOpen} close={() => setIsOpen(false)}>

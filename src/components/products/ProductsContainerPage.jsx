@@ -9,9 +9,9 @@ import { ProductsTabs } from "./product-tabs/ProductsTabs";
 export const ProductsContainerPage = () => {
   return (
     <div className="container-page-products">
-      <Link href="/categories">Administrar categorias</Link>
-      <SearchProduct />
+      <Link className="link-categories" href="/categories">Administrar categorias</Link>
       <NewProduct />
+      <SearchProduct />
       <ProductsFilters />
       <ProductsTabs />
     </div>

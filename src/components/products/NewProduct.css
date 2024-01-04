@@ -1,0 +1,20 @@
+.button-new-category {
+  border: none;
+  padding: 10px 15px;
+  border-radius: 10px;
+  background: skyblue;
+  color: #fff;
+  cursor: pointer;
+  transition: all .3s ease;
+  font-size: 15px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3px;
+  transition: all .3s ease;
+}
+
+.button-new-category:hover {
+  opacity: .8;
+}

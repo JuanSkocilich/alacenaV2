@@ -2,6 +2,7 @@
 
 import { useSearchParams, usePathname, useRouter } from "next/navigation";
 import React from "react";
+import "./SearchProduct.css";
 
 export const SearchProduct = () => {
   const searchParams = useSearchParams();
@@ -20,11 +21,13 @@ export const SearchProduct = () => {
   };
 
   return (
-    <div>
+    <div className="container-search">
       <input
         type="search"
         onChange={(e) => handleSearch(e.target.value)}
         defaultValue={searchParams.get("search")?.toString()}
+        placeholder="Buscar producto..."
+        className="search-product"
       />
     </div>
   );

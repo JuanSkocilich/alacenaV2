@@ -3,3 +3,8 @@
   flex-direction: column;
   gap: 20px;
 }
+
+.link-categories {
+  font-size: 18px;
+  color: #3a3b45;
+}

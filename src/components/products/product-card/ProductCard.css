@@ -12,10 +12,6 @@
   transition: all .3s ease;
 }
 
-.product-card:hover {
-  /* transform: translateY(-5px); */
-}
-
 .product-title {
   font-weight: 600;
   text-align: center;
