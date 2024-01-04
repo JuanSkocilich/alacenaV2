@@ -15,9 +15,3 @@
     justify-content: space-between;
   }
 }
-
-.container-type-product {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}

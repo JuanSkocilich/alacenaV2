@@ -56,16 +56,32 @@ export const ProductsTabs = () => {
       </TabList>
 
       <TabPanel>
-        <TabPanelContent productsArray={allProducts} text="No hay productos" />
+        <TabPanelContent
+          productsArray={allProducts}
+          text="No hay productos"
+          title="Todos los productos"
+        />
       </TabPanel>
       <TabPanel>
-        <TabPanelContent productsArray={productToExpire} text="No hay productos por vencer" />
+        <TabPanelContent
+          productsArray={productToExpire}
+          text="No hay productos por vencer"
+          title="Productos por vencer"
+        />
       </TabPanel>
       <TabPanel>
-        <TabPanelContent productsArray={expiredProducts} text="No hay productos vencidos" />
+        <TabPanelContent
+          productsArray={expiredProducts}
+          text="No hay productos vencidos"
+          title="Productos vencidos"
+        />
       </TabPanel>
       <TabPanel>
-        <TabPanelContent productsArray={missingProducts} text="No hay productos faltantes" />
+        <TabPanelContent
+          productsArray={missingProducts}
+          text="No hay productos faltantes"
+          title="Productos faltantes"
+        />
       </TabPanel>
     </Tabs>
   );

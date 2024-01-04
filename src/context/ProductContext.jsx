@@ -48,9 +48,7 @@ export function ProductProvider({ children }) {
     setAllProductsCategory(resJSON);
 
     const filter =
-      categoryFilter !== "all"
-        ? resJSON.filter((pro) => pro.category === categoryFilter || pro.category === "")
-        : resJSON;
+      categoryFilter !== "all" ? resJSON.filter((pro) => pro.category === categoryFilter) : resJSON;
 
     const search =
       getSearch !== "" ? filter.filter(({ name }) => searchCase(name, getSearch)) : filter;

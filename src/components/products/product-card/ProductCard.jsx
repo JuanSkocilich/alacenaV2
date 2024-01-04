@@ -84,9 +84,11 @@ export const ProductCard = ({ product }) => {
           </p>
         )}
       </div>
-      <div className="product-category">
-        <p>{product.category}</p>
-      </div>
+      {product.category && (
+        <div className="product-category">
+          <p>{product.category}</p>
+        </div>
+      )}
     </div>
   );
 };

@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import Modal from "../ui/Modal";
 import { NewProductForm } from "./NewProductForm";
 import { MdOutlineAdd } from "react-icons/md";
+import "./NewProduct.css";
 
 export const NewProduct = () => {
   const [isOpen, setIsOpen] = useState(false);

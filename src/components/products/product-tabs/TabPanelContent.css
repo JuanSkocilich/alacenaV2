@@ -1,0 +1,11 @@
+.container-type-product {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.title-panel {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 20px;
+}
