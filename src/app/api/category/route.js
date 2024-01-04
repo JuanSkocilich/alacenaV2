@@ -2,7 +2,7 @@ import { NextResponse } from "next/server";
 import { db } from "@/libs/db";
 
 export async function GET() {
-  const categories = await db.category.findMany();
+  const categories = await db.category.findMany({ orderBy: { name: "asc" } });
 
   return NextResponse.json(categories);
 }
