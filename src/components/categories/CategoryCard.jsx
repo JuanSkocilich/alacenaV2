@@ -24,6 +24,7 @@ export const CategoryCard = ({ category }) => {
         <EditCategoryForm category={category} setIsOpen={setIsOpen} />
       </Modal>
       <p>{category.category}</p>
+      <p>{category.folder}</p>
       <button onClick={handleEditCategory}>Editar</button>
       <button onClick={handleDeleteCategory}>Eliminar</button>
     </div>

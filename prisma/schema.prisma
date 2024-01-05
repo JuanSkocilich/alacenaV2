@@ -9,7 +9,7 @@ generator client {
 datasource db {
   provider  = "postgresql"
   url       = env("DATABASE_URL")
-  directUrl = env("DIRECT_URL")
+  // directUrl = env("DIRECT_URL")
 }
 
 model Product {
@@ -24,4 +24,10 @@ model Product {
 model Category {
   id       Int    @id @default(autoincrement())
   category String @unique
+  // folder   String?
 }
+
+// model Folder {
+//   id     Int    @id @default(autoincrement())
+//   folder String @unique
+// }
