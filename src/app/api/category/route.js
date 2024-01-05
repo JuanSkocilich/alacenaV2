@@ -20,7 +20,7 @@ export async function POST(request) {
     const newCategory = await db.category.create({
       data: {
         category,
-        folder,
+        // folder,
       },
     });
 
