@@ -12,7 +12,7 @@ export const RenderCategory = () => {
   }, []);
 
   return (
-    <div style={{ display: "flex" }}>
+    <div style={{ display: "flex", flexWrap: 'wrap', gap: 10 }}>
       {allCategories.map((category) => (
         <CategoryCard key={category.id} category={category} />
       ))}
