@@ -8,6 +8,7 @@ import { useProduct } from "@/context/ProductContext";
 import { useCategory } from "@/context/CategoryContext";
 import Select from "react-select";
 import { productAmountSchema, productDateSchema, productNameSchema } from "@/utils/yupSchemas";
+import "./ProductForm.css";
 
 const RegisterSchema = yup.object().shape({
   name: productNameSchema,
@@ -61,6 +62,7 @@ export const EditProductForm = ({ product, setIsOpen }) => {
       <form onSubmit={onSubmit} style={{ display: "flex", flexDirection: "column", gap: 10 }}>
         <label htmlFor="name">Nombre:</label>
         <input
+          className="input-product"
           id="name"
           type="text"
           placeholder="Nombre del producto"
@@ -72,6 +74,7 @@ export const EditProductForm = ({ product, setIsOpen }) => {
 
         <label htmlFor="amount">Cantidad</label>
         <input
+          className="input-product"
           min={0}
           id="amount"
           type="number"
@@ -84,6 +87,7 @@ export const EditProductForm = ({ product, setIsOpen }) => {
 
         <label htmlFor="date">Fecha de vencimento:</label>
         <input
+          className="input-product"
           id="date"
           type="date"
           {...register("date")}
@@ -108,7 +112,9 @@ export const EditProductForm = ({ product, setIsOpen }) => {
           control={control}
         />
 
-        <button type="submit">Guardar cambios</button>
+        <button className="button-product" type="submit">
+          Guardar cambios
+        </button>
       </form>
     </div>
   );

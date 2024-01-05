@@ -5,6 +5,7 @@ import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import { useCategory } from "@/context/CategoryContext";
+import "../products/ProductForm.css";
 
 const RegisterSchema = yup.object().shape({
   category: yup.string().required("Requerido").trim(),
@@ -42,6 +43,7 @@ export const EditCategoryForm = ({ category: currentCategory, setIsOpen }) => {
 
         <label htmlFor="category">Nombre:</label>
         <input
+          className="input-product"
           id="category"
           type="text"
           {...register("category")}
@@ -51,7 +53,7 @@ export const EditCategoryForm = ({ category: currentCategory, setIsOpen }) => {
         />
         {errors.category && <span style={{ color: "red" }}>{errors.category.message}</span>}
 
-        <button>Editar</button>
+        <button className="button-product">Editar</button>
       </form>
     </div>
   );

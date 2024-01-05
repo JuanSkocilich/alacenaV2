@@ -100,7 +100,7 @@ export function CategoryProvider({ children }) {
 
     if (res.ok) {
       setChangeCategory(true);
-      toast.success(`category eliminado con exito`);
+      toast.success(`Categoria eliminada con exito`);
     } else {
       toast.error(resJSON.message || messages.error.default);
     }

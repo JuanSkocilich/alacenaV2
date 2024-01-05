@@ -6,6 +6,7 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import { useCategory } from "@/context/CategoryContext";
 import { categoryNameSchema } from "@/utils/yupSchemas";
+import "../products/ProductForm.css";
 
 const RegisterSchema = yup.object().shape({
   category: categoryNameSchema,
@@ -32,6 +33,7 @@ export const NewCategoryForm = ({ setIsOpen }) => {
 
         <label htmlFor="category">Nombre:</label>
         <input
+          className="input-product"
           id="category"
           type="text"
           {...register("category")}
@@ -39,7 +41,7 @@ export const NewCategoryForm = ({ setIsOpen }) => {
         />
         {errors.category && <span style={{ color: "red" }}>{errors.category.message}</span>}
 
-        <button>Agregar categoria</button>
+        <button className="button-product">Agregar categoria</button>
       </form>
     </div>
   );

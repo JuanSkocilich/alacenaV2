@@ -1,0 +1,28 @@
+.card-category-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: skyblue;
+  color: white;
+  margin-top: 20px;
+}
+
+.category-title {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.card-buttons {
+  display: flex;
+  gap: 4px;
+}
+
+.card-button {
+  padding: 4px;
+  border: none;
+  background-color: white;
+  border-radius: 10px;
+  width: 60px;
+}

@@ -8,6 +8,7 @@ import { useProduct } from "@/context/ProductContext";
 import { useCategory } from "@/context/CategoryContext";
 import Select from "react-select";
 import { productAmountSchema, productDateSchema, productNameSchema } from "@/utils/yupSchemas";
+import "./ProductForm.css";
 
 const RegisterSchema = yup.object().shape({
   name: productNameSchema,
@@ -42,11 +43,18 @@ export const NewProductForm = ({ setIsOpen }) => {
         <h1>Agregar producto</h1>
 
         <label htmlFor="name">Nombre:</label>
-        <input id="name" type="text" {...register("name")} placeholder="Nombre del producto" />
+        <input
+          className="input-product"
+          id="name"
+          type="text"
+          {...register("name")}
+          placeholder="Nombre del producto"
+        />
         {errors.name && <span style={{ color: "red" }}>{errors.name.message}</span>}
 
         <label htmlFor="amount">Cantidad:</label>
         <input
+          className="input-product"
           min={0}
           id="amount"
           type="number"
@@ -56,7 +64,7 @@ export const NewProductForm = ({ setIsOpen }) => {
         {errors.amount && <span style={{ color: "red" }}>{errors.amount.message}</span>}
 
         <label htmlFor="date">Fecha de vencimento:</label>
-        <input id="date" type="date" {...register("date")} />
+        <input className="input-product" id="date" type="date" {...register("date")} />
         {errors.date && <span style={{ color: "red" }}>{errors.date.message}</span>}
 
         <label htmlFor="category">Categoria:</label>
@@ -77,7 +85,7 @@ export const NewProductForm = ({ setIsOpen }) => {
           control={control}
         />
 
-        <button>Agregar producto</button>
+        <button className="button-product">Agregar producto</button>
       </form>
     </div>
   );
